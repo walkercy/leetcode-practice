@@ -1,14 +1,8 @@
 package com.leetcode.algorithm.easy;
 
-public class Solution_237 {
+import com.leetcode.algorithm.ListNode;
 
-    class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int val) {
-            this.val = val;
-        }
-    }
+public class Solution_237 {
 
     public void deleteNode(ListNode node) {
         node.val = node.next.val;
