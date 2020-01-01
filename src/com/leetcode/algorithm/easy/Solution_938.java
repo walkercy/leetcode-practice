@@ -5,26 +5,26 @@ import com.leetcode.algorithm.TreeNode;
 public class Solution_938 {
 
     /**
-     * µİ¹éÉî¶ÈÓÅÏÈ±éÀú
-     * @param root ¶ş²æËÑË÷Ê÷
-     * @param L ×ó·¶Î§
-     * @param R ÓÒ·¶Î§
-     * @return ÔÚL,R·¶Î§ÄÚµÄÊıÖµºÍ(°üº¬)
+     * é€’å½’æ·±åº¦ä¼˜å…ˆéå†
+     * @param root äºŒå‰æœç´¢æ ‘
+     * @param L å·¦èŒƒå›´
+     * @param R å³èŒƒå›´
+     * @return åœ¨L,RèŒƒå›´å†…çš„æ•°å€¼å’Œ(åŒ…å«)
      */
     public int rangeSumBST(TreeNode root, int L, int R) {
         int result = 0;
         if (root == null) {
             return result;
         }
-        // valÔÚ·¶Î§ÄÚÖ±½ÓÀÛ¼Ó£¬²¢ÏòÏÂËÑËù×ó¡¢ÓÒ×ÓÊ÷
+        // valåœ¨èŒƒå›´å†…ç›´æ¥ç´¯åŠ ï¼Œå¹¶å‘ä¸‹æœæ‰€å·¦ã€å³å­æ ‘
         if (root.val >= L && root.val <= R) {
             result += root.val;
         }
-        // ´óÓÚRµÄËÑË÷×ó×ÓÊ÷
+        // å¤§äºRçš„æœç´¢å·¦å­æ ‘
         if (root.val >= L) {
             result += rangeSumBST(root.left, L, R);
         }
-        // Ğ¡ÓÚLµÄËÑË÷ÓÒ×ÓÊ÷
+        // å°äºLçš„æœç´¢å³å­æ ‘
         if (root.val <= R) {
             result += rangeSumBST(root.right, L, R);
         }

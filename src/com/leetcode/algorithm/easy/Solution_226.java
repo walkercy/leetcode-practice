@@ -3,12 +3,12 @@ package com.leetcode.algorithm.easy;
 import com.leetcode.algorithm.TreeNode;
 
 /**
- * ·­×ª¶ş²æÊ÷
+ * ç¿»è½¬äºŒå‰æ ‘
  */
 public class Solution_226 {
 
     public TreeNode invertTree(TreeNode root) {
-        // µİ¹é½»»»×óÓÒ×ÓÊ÷£¬Ö±µ½×ÓÊ÷Îªnull
+        // é€’å½’äº¤æ¢å·¦å³å­æ ‘ï¼Œç›´åˆ°å­æ ‘ä¸ºnull
         if (root != null) {
             TreeNode left = root.left;
             root.left = invertTree(root.right);

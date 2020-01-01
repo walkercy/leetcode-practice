@@ -9,22 +9,22 @@ import java.util.Queue;
 import java.util.Stack;
 
 /**
- * ¼ÆËã¶ş²æÊ÷×î´óÉî¶È
+ * è®¡ç®—äºŒå‰æ ‘æœ€å¤§æ·±åº¦
  */
 public class Solution_104 {
 
     /**
-     * DFSÉî¶ÈÓÅÏÈ±éÀú
+     * DFSæ·±åº¦ä¼˜å…ˆéå†
      * @param root
      * @return
      */
     public int maxDepth(TreeNode root) {
-        // Ã¿Ò»²ã¶¼+1, µİ¹éÃ¿¸ö½ÚµãµÄ×óÓÒ×ÓÊ÷
+        // æ¯ä¸€å±‚éƒ½+1, é€’å½’æ¯ä¸ªèŠ‚ç‚¹çš„å·¦å³å­æ ‘
         return root == null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
     }
 
     /**
-     * ¹ã¶ÈÓÅÏÈ±éÀú
+     * å¹¿åº¦ä¼˜å…ˆéå†
      * @param root
      * @return
      */
@@ -38,7 +38,7 @@ public class Solution_104 {
         while (!list.isEmpty()) {
             depth++;
             int length = list.size();
-            // °ÑÃ¿Ò»²ãµÄÔªËØ´Ó¶ÓÁĞÖĞÒÆ³ı£¬²¢½«Æä×ÓÊ÷Ìí¼Óµ½¶ÓÁĞÖĞ
+            // æŠŠæ¯ä¸€å±‚çš„å…ƒç´ ä»é˜Ÿåˆ—ä¸­ç§»é™¤ï¼Œå¹¶å°†å…¶å­æ ‘æ·»åŠ åˆ°é˜Ÿåˆ—ä¸­
             for (int i = 0; i < length; i++) {
                 TreeNode node = list.pollFirst();
                 if (node.left != null) {

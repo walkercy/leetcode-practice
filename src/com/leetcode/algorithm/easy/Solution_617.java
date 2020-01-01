@@ -3,7 +3,7 @@ package com.leetcode.algorithm.easy;
 import com.leetcode.algorithm.TreeNode;
 
 /**
- * ºÏ²¢Á½¸ö¶ş²æÊ÷
+ * åˆå¹¶ä¸¤ä¸ªäºŒå‰æ ‘
  */
 public class Solution_617 {
 
@@ -12,7 +12,7 @@ public class Solution_617 {
             return null;
         }
         int val = t1 == null ? t2.val : t2 == null ? t1.val : t1.val + t2.val;
-        // Ã»±ØÒªĞÂnewÒ»¸önode
+        // æ²¡å¿…è¦æ–°newä¸€ä¸ªnode
         TreeNode node = new TreeNode(val);
         TreeNode l1 = t1 == null ? null : t1.left;
         TreeNode r1 = t1 == null ? null : t1.right;
@@ -24,18 +24,18 @@ public class Solution_617 {
     }
 
     /**
-     * ¹Ù·½Ìâ½â
+     * å®˜æ–¹é¢˜è§£
      * @param t1
      * @param t2
      * @return
      */
     public TreeNode mergeTrees1(TreeNode t1, TreeNode t2) {
-        // t1Îª¿Õ·µ»Øt2£¬t2Îª¿Õ·µ»Øt1
+        // t1ä¸ºç©ºè¿”å›t2ï¼Œt2ä¸ºç©ºè¿”å›t1
         if (t1 == null)
             return t2;
         if (t2 == null)
             return t1;
-        // t1 t2 ¶¼²»Îª¿Õ
+        // t1 t2 éƒ½ä¸ä¸ºç©º
         t1.val += t2.val;
         t1.left = mergeTrees1(t1.left, t2.left);
         t1.right = mergeTrees1(t1.right, t2.right);
