@@ -7,11 +7,20 @@ package com.leetcode.algorithm.easy;
 public class Solution_657 {
 
 	public boolean judgeCircle(String moves) {
-		int result = 0;
+		int horizontal = 0;
+		int vertical = 0;
 		for (char c : moves.toCharArray()) {
-			result = result + ((c == 'U' || c == 'L') ? 1 : -1);
+			if (c == 'L') {
+				vertical++;
+			} else if (c == 'R') {
+				vertical--;
+			} else if (c == 'U') {
+				horizontal++;
+			} else if (c == 'D') {
+				horizontal--;
+			}
 		}
-		return result == 0;
+		return horizontal == 0 && vertical == 0;
 	}
 
 }
