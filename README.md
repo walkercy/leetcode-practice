@@ -1,2 +1,2 @@
 # leetcode-practice
-刷题
+深化内功
