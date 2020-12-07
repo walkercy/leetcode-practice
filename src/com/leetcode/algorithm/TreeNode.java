@@ -8,6 +8,10 @@ public class TreeNode {
 
     public TreeNode right;
 
+    public TreeNode next;
+
+    public TreeNode() {}
+
     public TreeNode(int x) {
         val = x;
     }
