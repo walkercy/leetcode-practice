@@ -1,4 +1,4 @@
-package com.leetcode.algorithm.easy;
+package com.leetcode.algorithm.binarytree;
 
 import com.leetcode.algorithm.TreeNode;
 
